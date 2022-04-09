@@ -130,11 +130,10 @@
 #### 安装依赖
 
 > ​	主要目的 : 为三大件编译安装提供支持
->
-> ​	<!-- 此次搭建 LAMP 环境大部分依赖内容,阿里centos7-yum源以更新并支持,以下依赖包安装,作为掌握理解手动搭配环境所要理解掌握. -->
+> ​	此次搭建 LAMP 环境大部分依赖内容,阿里centos7-yum源以更新并支持,以下依赖包安装,作为掌握理解手动搭配环境所要理解掌握.
 
 ##### 安装 libxml2
->​	**Libxml2 是一个 xml c 语言版的解析器**，本来是为 Gnome 项目开发的工具，是一个基于 MIT License 的免费开源软件。它除了支持 c 语言版以外，还支持 c++、PHP、Pascal、Ruby、Tcl 等语言的绑定，能在 Windows、Linux、Solaris、MacOsX 等平台上运行。功能还是相当强大的，相信满足一般用户需求没有任何问题。
+​	**Libxml2 是一个 xml c 语言版的解析器**，本来是为 Gnome 项目开发的工具，是一个基于 MIT License 的免费开源软件。它除了支持 c 语言版以外，还支持 c++、PHP、Pascal、Ruby、Tcl 等语言的绑定，能在 Windows、Linux、Solaris、MacOsX 等平台上运行。功能还是相当强大的，相信满足一般用户需求没有任何问题。
 
 ```bash
 
@@ -146,7 +145,7 @@
 ```
 
 ##### 安装 libmcrypt
->​	**libmcrypt 是加密算法扩展库**。支持 DES, 3DES, RIJNDAEL, Twofish, IDEA, GOST, CAST-256, ARCFOUR, SERPENT, SAFER+等算法。
+​	**libmcrypt 是加密算法扩展库**。支持 DES, 3DES, RIJNDAEL, Twofish, IDEA, GOST, CAST-256, ARCFOUR, SERPENT, SAFER+等算法。
 
 ```bash
 	
@@ -160,7 +159,7 @@
 ```
 
 ##### 安装 mhash
->​	**mhash 是基于离散数学原理的不可逆向的 php 加密方式扩展库**，其在默认情况下不开启。mhash 的可以用于创建校验数值，消息摘要，消息认证码，以及无需原文的关键信息保存（如密码）等。
+​	**mhash 是基于离散数学原理的不可逆向的 php 加密方式扩展库**，其在默认情况下不开启。mhash 的可以用于创建校验数值，消息摘要，消息认证码，以及无需原文的关键信息保存（如密码）等。
 
 ```bash
 	[root@localhost ~]$ cd /opt/mhash-0.9.9.9
@@ -168,7 +167,7 @@
 ```
 
 ##### 安装 mcrypt
->​	**mcrypt 是 php 里面重要的加密支持扩展库**。mcrypt 库支持 20 多种加密算法和 8 种加密模式
+​	**mcrypt 是 php 里面重要的加密支持扩展库**。mcrypt 库支持 20 多种加密算法和 8 种加密模式
 
 ```bash
 	
@@ -181,7 +180,7 @@
 ```
 
 ##### 安装 zlib
->​	**zlib 是提供数据压缩用的函式库**，由 Jean-loup Gailly 与 Mark Adler 所开发，初版 0.9 版在 1995年 5 月 1 日发表。zlib 使用 DEFLATE 算法，最初是为 libpng 函式库所写的，后来普遍为许多软件所使用。此函式库为自由软件，使用 zlib 授权
+​	**zlib 是提供数据压缩用的函式库**，由 Jean-loup Gailly 与 Mark Adler 所开发，初版 0.9 版在 1995年 5 月 1 日发表。zlib 使用 DEFLATE 算法，最初是为 libpng 函式库所写的，后来普遍为许多软件所使用。此函式库为自由软件，使用 zlib 授权
 
 ```bash
 	
@@ -195,7 +194,7 @@
 ```
 
 ##### 安装 libpng
->​	libpng 软件包包含 libpng 库.这些库**被其他程式用于解码 png 图片**
+​	libpng 软件包包含 libpng 库.这些库**被其他程式用于解码 png 图片**
 
 ```bash
 	
@@ -229,7 +228,7 @@
 ```
 
 ##### 安装 jpeg6
->​	**jpeg6 提供用于解码.jpg 和.jpeg 图片的库文件**
+​	**jpeg6 提供用于解码.jpg 和.jpeg 图片的库文件**
 
 ```bash
 
@@ -256,7 +255,7 @@
 ```
 
 ##### 安装 freetype
->​	**FreeType 库是一个完全免费(开源)的、高质量的且可移植的字体引擎**，它提供统一的接口来访问多种字体格式文件，支持单色位图、反走样位图的渲染。
+​	**FreeType 库是一个完全免费(开源)的、高质量的且可移植的字体引擎**，它提供统一的接口来访问多种字体格式文件，支持单色位图、反走样位图的渲染。
 
 ```bash
 	[root@localhost ~]$ cd /opt/freetype-2.3.5
@@ -285,8 +284,8 @@
 ### 安装 Apache
 
 #### 安装准备
->​	源码包 2.4.\* 版本之后中默认没有集成 apr 的依赖包
->​	安装httpd时需要安装 apr 和 apr-util 。这两个是一个通用函数库，可以使httpd不关心底层操作系统平台，方便移植
+​	源码包 2.4.\* 版本之后中默认没有集成 apr 的依赖包
+​	安装httpd时需要安装 apr 和 apr-util 。这两个是一个通用函数库，可以使httpd不关心底层操作系统平台，方便移植
 
 ```bash
     [root@localhost ~]$ cd /opt/httpd-2.4.53
@@ -295,7 +294,7 @@
 ```
 
 #### 安装 pcre
->​	Apache 默认需要依赖 pcre 软件，但由于 Apache 软件版本更新较快，系统预安装的 pcre 通常无法不匹配，所以需要人为手动安装适合版本
+​	Apache 默认需要依赖 pcre 软件，但由于 Apache 软件版本更新较快，系统预安装的 pcre 通常无法不匹配，所以需要人为手动安装适合版本
 
 ```bash
 	[root@localhost ~]$ cd /opt/pcre-8.45
@@ -304,14 +303,14 @@
 ```
 
 #### 安装 mod_ssl
->​	Apache 的加密传输模块 mod_ssl，需要安装此软件产生
+​	Apache 的加密传输模块 mod_ssl，需要安装此软件产生
 
 ```bash
 	# [root@localhost ~]$ yum -y install openssl-devel expat-devel libxml2-devel # 以一键安装	
 ```
 
 #### 安装 Apache 
->​	Apache 服务名称 httpd
+​	Apache 服务名称 httpd
 
 ```bash
 
@@ -454,7 +453,7 @@
 #### [源码包]MySQL安装 
 
 ##### 安装 ncurses
->​	**Ncurses 提供字符终端处理库**，包括面板和菜单。它提供了一套控制光标，建立窗口，改变前景背景颜色以及处理鼠标操作的函数。使用户在字符终端下编写应用程序时绕过了那些恼人的底层机制。简而言之，他是一个可以使应用程序直接控制终端屏幕显示的函数库。
+​	**Ncurses 提供字符终端处理库**，包括面板和菜单。它提供了一套控制光标，建立窗口，改变前景背景颜色以及处理鼠标操作的函数。使用户在字符终端下编写应用程序时绕过了那些恼人的底层机制。简而言之，他是一个可以使应用程序直接控制终端屏幕显示的函数库。
 
 ```bash
 
@@ -466,7 +465,7 @@
 ```
 
 ##### 安装 bison
->​	mysql 在 5.5 以后，不再使用./configure 工具，进行编译安装。而使用 cmake 工具替代了./configure工具。bison 是一个自由软件，用于自动生成语法分析器程序，可用于所有常见的操作系统
+​	mysql 在 5.5 以后，不再使用./configure 工具，进行编译安装。而使用 cmake 工具替代了./configure工具。bison 是一个自由软件，**用于自动生成语法分析器程序**，可用于所有常见的操作系统
 
 ```bash
 	yum -y install bison bison-devel # 以一键安装
@@ -1119,7 +1118,7 @@ write_buffer_size=4M                                    # 写入缓冲区大小
 ### 安装 PHP
 #### 安装准备
 ##### 安装 libiconv 库
->​	libiconv库为需要做转换的应用提供了一个iconv()的函数，以**实现一个字符编码到另一个字符编码的转换**。
+​	libiconv库为需要做转换的应用提供了一个iconv()的函数，以**实现一个字符编码到另一个字符编码的转换**。
 
 ```bash
 
@@ -1296,7 +1295,7 @@ write_buffer_size=4M                                    # 写入缓冲区大小
 #### 配置 PHP
 
 ##### 安装 openssl 模块
->​	`OpenSSL 是一个强大的安全套接字层密码库`，囊括主要的密码算法、常用的密钥和证书封装管理功能 及 SSL 协议，并提供丰富的应用程序供测试或其它目的使用。
+​	`OpenSSL 是一个强大的安全套接字层密码库`，囊括主要的密码算法、常用的密钥和证书封装管理功能 及 SSL 协议，并提供丰富的应用程序供测试或其它目的使用。
 
 ```bash
 
@@ -1320,7 +1319,7 @@ write_buffer_size=4M                                    # 写入缓冲区大小
 ```
 
 ##### 安装 memcache 模块
->​	`Memcache 是一个高性能的分布式的内存对象缓存(高速缓存)系统`，通过在内存里维护一个统一的巨大的hash 表，它能够用来存储各种格式的数据，包括图像、视频、文件以及数据库检索的结果等。简单的说就是将数据调用到内存中，然后从内存中读取，从而大大提高读取速度。
+​	`Memcache 是一个高性能的分布式的内存对象缓存(高速缓存)系统`，通过在内存里维护一个统一的巨大的hash 表，它能够用来存储各种格式的数据，包括图像、视频、文件以及数据库检索的结果等。简单的说就是将数据调用到内存中，然后从内存中读取，从而大大提高读取速度。
 
 ```bash
 
@@ -1345,7 +1344,7 @@ write_buffer_size=4M                                    # 写入缓冲区大小
 ```
 
 ##### 修改 php 配置文件
->​	使其识别并调用 openssl 和 memcache 两个模块
+​	使其识别并调用 openssl 和 memcache 两个模块
 
 ```bash
 
@@ -1392,7 +1391,7 @@ write_buffer_size=4M                                    # 写入缓冲区大小
 ```
 
 ##### 安装 phpMyAdmin (非必要内容)
->​	phpMyAdmin 是一个以 PHP 为基础，`以 Web-Base 方式架构在网站主机上的 MySQL 的数据库管理工具`，让管理者可用 Web 接口管理 MySQL 数据库。
+​	phpMyAdmin 是一个以 PHP 为基础，`以 Web-Base 方式架构在网站主机上的 MySQL 的数据库管理工具`，让管理者可用 Web 接口管理 MySQL 数据库。
 
 ```bash
 
@@ -1442,14 +1441,13 @@ write_buffer_size=4M                                    # 写入缓冲区大小
 >​		解决办法: # 创建链接,是两个配置文件相匹配
 >​			[root@x ~]# ln -s /usr/local/php/etc/php.ini /usr/local/php/lib/php.ini
 >
+>​	2. 第二种情况可能是由于 `php-pecl-memcache.x86_64` 这个安装rpm包所引起
 >
->
->	2. 第二种情况可能是由于 `php-pecl-memcache.x86_64` 这个安装rpm包所引起
 >​		解决办法: # 删除rpm包 重启httpd
 >​			[root@x ~]# yum remove php-pecl-memcache.x86_64 
 
 #### 设置开机自启
->借助系统自带脚本`/etc/rc.local`，此脚本开机后会自动加载，我们可以将源码安装的服务启动命令写入该脚本，间接实现开机自启动
+>​	借助系统自带脚本`/etc/rc.local`，此脚本开机后会自动加载，我们可以将源码安装的服务启动命令写入该脚本，间接实现开机自启动
 
 ```bash
 
